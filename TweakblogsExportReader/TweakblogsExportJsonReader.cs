@@ -3,7 +3,7 @@ using TweakblogsExportReader.Converters;
 using TweakblogsExportReader.Models;
 
 namespace TweakblogsExportReader;
-public class TweakblogsExportJsonReader
+public class TweakblogsExportJsonReader : ITweakblogsExportJsonReader
 {
     private readonly JsonSerializerOptions _defaultjsonserializeroptions = new()
     {
@@ -18,7 +18,10 @@ public class TweakblogsExportJsonReader
     public async ValueTask<Blog> ReadAsync(string path, CancellationToken cancellationToken = default)
     {
         using var f = File.OpenRead(path);
-        return (await JsonSerializer.DeserializeAsync<Blog>(f, _jsonserializeroptions, cancellationToken).ConfigureAwait(false))
-            ?? throw new Exception();
+        return await ReadAsync(f, cancellationToken);
     }
+
+    public async ValueTask<Blog> ReadAsync(Stream stream, CancellationToken cancellationToken = default)
+        => (await JsonSerializer.DeserializeAsync<Blog>(stream, _jsonserializeroptions, cancellationToken).ConfigureAwait(false))
+        ?? throw new JsonException("Error reading blog export");
 }
