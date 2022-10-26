@@ -5,7 +5,34 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<LangVersion>latest</LangVersion>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>Tweakers Export Reader</Title>
+		<Version>1.0.0-beta</Version>
+		<Authors>RobIII</Authors>
+		<Product>$(AssemblyName)</Product>
+		<Company>Devcorner.nl</Company>
+		<Description>Quick'n'dirty .Net Tweakblogs Export reader to aid in conversion to other platforms.</Description>
+		<Copyright>(c) 2022 Rob Janssen / Devcorner.nl</Copyright>
+		<PackageProjectUrl>https://github.com/RobThree/TweakblogsExportReader</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/RobThree/TweakblogsExportReader</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageTags>c-sharp;export;json;library;backup;dotnet;nuget;dotnet-standard;c-sharp-library;nuget-package;tweakers</PackageTags>
+		<PackageReleaseNotes>Initial release</PackageReleaseNotes>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageIcon>logo.png</PackageIcon>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Include="..\logo.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Include="..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="System.Text.Json" Version="6.0.6" />
