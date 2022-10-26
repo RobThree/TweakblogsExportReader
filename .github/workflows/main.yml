@@ -1,0 +1,18 @@
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    name: Update NuGet package
+    steps:
+    - uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+    - name: Create the package
+      run: dotnet pack --configuration Release TweakblogsExportReader
+    - name: Publish the package to nuget.org
+      run: dotnet nuget push */bin/Release/*.nupkg -k $NUGET_AUTH_TOKEN -s https://api.nuget.org/v3/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{ secrets.NUGET_TOKEN }}
