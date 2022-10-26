@@ -10,7 +10,7 @@ public record Main
     [property: JsonPropertyName("bgRepeat")] Repeat? BackgroundRepeat,
     [property: JsonPropertyName("bgAttachment")] Attachment? BackgroundAttachment,
     [property: JsonPropertyName("pageBorderColor")] Color? PageBorderColor,
-    [property: JsonPropertyName("pageBorderSize")] int? PageBorderSize,
+    [property: JsonPropertyName("pageBorderSize")] uint? PageBorderSize,
     [property: JsonPropertyName("pageBgColor")] Color? PageBackgroundColor,
     [property: JsonPropertyName("linkColor")] Color? LinkColor,
     [property: JsonPropertyName("linkTextDecoration")] TextDecoration? LinkTextDecoration,

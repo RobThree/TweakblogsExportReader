@@ -7,7 +7,7 @@
 		<LangVersion>latest</LangVersion>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Title>Tweakers Export Reader</Title>
-		<Version>2.0.0</Version>
+		<Version>2.0.1</Version>
 		<Authors>RobIII</Authors>
 		<Product>$(AssemblyName)</Product>
 		<Company>Devcorner.nl</Company>
@@ -18,7 +18,7 @@
 		<RepositoryType>git</RepositoryType>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageTags>c-sharp;export;json;library;backup;dotnet;nuget;dotnet-standard;c-sharp-library;nuget-package;tweakers</PackageTags>
-		<PackageReleaseNotes>Strong(er) typed values for Background attachment and repeat, Font style and weigh and text decoration.</PackageReleaseNotes>
+		<PackageReleaseNotes>PageBorderSize is a uint (non-negative values).</PackageReleaseNotes>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageIcon>logo.png</PackageIcon>
 	</PropertyGroup>
