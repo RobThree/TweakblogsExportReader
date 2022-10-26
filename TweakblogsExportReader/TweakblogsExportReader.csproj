@@ -18,7 +18,7 @@
 		<RepositoryType>git</RepositoryType>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageTags>c-sharp;export;json;library;backup;dotnet;nuget;dotnet-standard;c-sharp-library;nuget-package;tweakers</PackageTags>
-		<PackageReleaseNotes>Initial release</PackageReleaseNotes>
+		<PackageReleaseNotes>Added ITweakblogsExportJsonReader interface and added overload to read a stream.</PackageReleaseNotes>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageIcon>logo.png</PackageIcon>
 	</PropertyGroup>
