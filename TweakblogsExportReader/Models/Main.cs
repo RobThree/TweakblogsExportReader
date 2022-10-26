@@ -1,20 +1,21 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Drawing;
+using System.Text.Json.Serialization;
 
 namespace TweakblogsExportReader.Models;
 
 public record Main
 (
-    [property: JsonPropertyName("bgColor")] string? BackgroundColor,
-    [property: JsonPropertyName("bgPicture")] string? BackgroundImage,
-    [property: JsonPropertyName("bgRepeat")] string? BackgroundRepeat,
-    [property: JsonPropertyName("bgAttachment")] string? BackgroundAttachment,
-    [property: JsonPropertyName("pageBorderColor")] string? PageBorderColor,
+    [property: JsonPropertyName("bgColor")] Color? BackgroundColor,
+    [property: JsonPropertyName("bgPicture")] Uri? BackgroundImage,
+    [property: JsonPropertyName("bgRepeat")] Repeat? BackgroundRepeat,
+    [property: JsonPropertyName("bgAttachment")] Attachment? BackgroundAttachment,
+    [property: JsonPropertyName("pageBorderColor")] Color? PageBorderColor,
     [property: JsonPropertyName("pageBorderSize")] int? PageBorderSize,
-    [property: JsonPropertyName("pageBgColor")] string? PageBackgroundColor,
-    [property: JsonPropertyName("linkColor")] string? LinkColor,
-    [property: JsonPropertyName("linkTextDecoration")] string? LinkTextDecoration,
-    [property: JsonPropertyName("linkHoverColor")] string? LinkHoverColor,
-    [property: JsonPropertyName("linkHoverTextDecoration")] string? LinkHoverTextDecoration,
-    [property: JsonPropertyName("linkVisitedColor")] string? LinkVisitedColor,
-    [property: JsonPropertyName("linkVisitedTextDecoration")] string? LinkVisitedTextDecoration
+    [property: JsonPropertyName("pageBgColor")] Color? PageBackgroundColor,
+    [property: JsonPropertyName("linkColor")] Color? LinkColor,
+    [property: JsonPropertyName("linkTextDecoration")] TextDecoration? LinkTextDecoration,
+    [property: JsonPropertyName("linkHoverColor")] Color? LinkHoverColor,
+    [property: JsonPropertyName("linkHoverTextDecoration")] TextDecoration? LinkHoverTextDecoration,
+    [property: JsonPropertyName("linkVisitedColor")] Color? LinkVisitedColor,
+    [property: JsonPropertyName("linkVisitedTextDecoration")] TextDecoration? LinkVisitedTextDecoration
 );

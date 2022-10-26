@@ -1,14 +1,15 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Drawing;
+using System.Text.Json.Serialization;
 
 namespace TweakblogsExportReader.Models;
 
 public record Banner
 (
-    [property: JsonPropertyName("bPicture")] string? Image,
+    [property: JsonPropertyName("bPicture")] Uri? Image,
     [property: JsonPropertyName("bFontFamily")] string? FontFamily,
-    [property: JsonPropertyName("bFontSize")] int? FontSize,
-    [property: JsonPropertyName("bFontColor")] string? FontColor,
-    [property: JsonPropertyName("bWidth")] int? Width,
-    [property: JsonPropertyName("bHeight")] int? Height,
+    [property: JsonPropertyName("bFontSize")] uint? FontSize,
+    [property: JsonPropertyName("bFontColor")] Color? FontColor,
+    [property: JsonPropertyName("bWidth")] uint? Width,
+    [property: JsonPropertyName("bHeight")] uint? Height,
     [property: JsonPropertyName("bShowTitle")] bool ShowTitle
 );

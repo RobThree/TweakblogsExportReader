@@ -7,7 +7,7 @@
 		<LangVersion>latest</LangVersion>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Title>Tweakers Export Reader</Title>
-		<Version>1.0.1</Version>
+		<Version>2.0.0</Version>
 		<Authors>RobIII</Authors>
 		<Product>$(AssemblyName)</Product>
 		<Company>Devcorner.nl</Company>
@@ -18,7 +18,7 @@
 		<RepositoryType>git</RepositoryType>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageTags>c-sharp;export;json;library;backup;dotnet;nuget;dotnet-standard;c-sharp-library;nuget-package;tweakers</PackageTags>
-		<PackageReleaseNotes>Added ITweakblogsExportJsonReader interface and added overload to read a stream.</PackageReleaseNotes>
+		<PackageReleaseNotes>Strong(er) typed values for Background attachment and repeat, Font style and weigh and text decoration.</PackageReleaseNotes>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageIcon>logo.png</PackageIcon>
 	</PropertyGroup>
@@ -35,6 +35,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="System.Drawing.Common" Version="6.0.0" />
 		<PackageReference Include="System.Text.Json" Version="6.0.6" />
 	</ItemGroup>
 

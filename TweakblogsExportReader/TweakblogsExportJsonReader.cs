@@ -7,7 +7,15 @@ public class TweakblogsExportJsonReader : ITweakblogsExportJsonReader
 {
     private readonly JsonSerializerOptions _defaultjsonserializeroptions = new()
     {
-        Converters = { new DateTimeOffsetConverter() }
+        Converters = {
+            new DateTimeOffsetConverter(),
+            new ColorConverter(),
+            new EnumConverter<Attachment>(),
+            new EnumConverter<FontStyle>(),
+            new EnumConverter<FontWeight>(),
+            new EnumConverter<Repeat>(),
+            new EnumConverter<TextDecoration>()
+        }
     };
 
     private readonly JsonSerializerOptions _jsonserializeroptions;
