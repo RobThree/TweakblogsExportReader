@@ -6,6 +6,20 @@ public enum Attachment
     Scroll
 }
 
+public enum BorderType
+{
+    None,
+    //Hidden,
+    Dotted,
+    Dashed,
+    Solid,
+    Double,
+    Groove,
+    Ridge,
+    Inset,
+    Outset
+}
+
 public enum FontStyle
 {
     Normal,
@@ -17,8 +31,8 @@ public enum FontWeight
 {
     Normal,
     Bold,
-    //Lighter,
-    //Bolder
+    Lighter,
+    Bolder
 }
 public enum Repeat
 {

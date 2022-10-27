@@ -8,9 +8,11 @@ public class TweakblogsExportJsonReader : ITweakblogsExportJsonReader
     private readonly JsonSerializerOptions _defaultjsonserializeroptions = new()
     {
         Converters = {
+            new CustomCSSJsonConverter(),
             new DateTimeOffsetConverter(),
             new ColorConverter(),
             new EnumConverter<Attachment>(),
+            new EnumConverter<BorderType>(),
             new EnumConverter<FontStyle>(),
             new EnumConverter<FontWeight>(),
             new EnumConverter<Repeat>(),

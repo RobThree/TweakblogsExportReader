@@ -4,9 +4,8 @@ namespace TweakblogsExportReader.Models;
 
 public record CustomCSS
 (
-    [property: JsonPropertyName("main")] Main Main,
-    [property: JsonPropertyName("banner")] Banner Banner,
-    [property: JsonPropertyName("content")] Content Content
-//TODO: What is this?
-//object[] sidebar { get; set; } 
+    [property: JsonPropertyName("main")] Main? Main,
+    [property: JsonPropertyName("banner")] Banner? Banner,
+    [property: JsonPropertyName("content")] Content? Content,
+    [property: JsonPropertyName("sidebar")] Sidebar? Sidebar
 );
