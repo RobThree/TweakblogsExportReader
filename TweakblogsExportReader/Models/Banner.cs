@@ -9,7 +9,7 @@ public record Banner
     [property: JsonPropertyName("bFontFamily")] string? FontFamily,
     [property: JsonPropertyName("bFontSize")] byte FontSize,
     [property: JsonPropertyName("bFontColor")] Color? FontColor,
-    [property: JsonPropertyName("bWidth")] byte Width,
-    [property: JsonPropertyName("bHeight")] byte Height,
+    [property: JsonPropertyName("bWidth")] uint Width,
+    [property: JsonPropertyName("bHeight")] uint Height,
     [property: JsonPropertyName("bShowTitle")] bool ShowTitle
 );
